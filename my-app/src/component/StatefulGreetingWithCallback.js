@@ -14,11 +14,18 @@ class StatefulGreetingWithCallback extends React.Component {
 
     handleClick(){
         // Updating the state of introduction that was initial set in constructor
+        // SET STATE IS "Asynchronous" function, meaning it executing in the BACKGOUND, while rest of the code is executing in foreground
         this.setState({
             introduction: "Goodbye!",
             buttonText : "Enter",
+        },() =>{
+            // This the fix to below issue always, it is CALL BACK function, always write code in callback function like this not after setState
+            console.log('new state', this.state.introduction)
+            console.log('new state', this.state.buttonText)
         })
+        //Issue: This console.log still fetched the old values "Hello!" and Exit as it was continuous executing in foreground
         console.log(this.state.introduction)
+        console.log(this.state.buttonText)
     }
 
     render() {
