@@ -6,11 +6,23 @@ class StatefulGreeting extends React.Component {
         super(props);
         this.state = {
             // initial state values
+            introduction: "Hello!",
+            buttonText: "Exit",
+
         };
     }
 
     render() {
-        return <h1>Hello, {this.props.greeting} my name is {this.props.name}</h1>
+        return (
+            <div>
+                <h1>
+                    {this.state.introduction} {this.props.greeting}
+                </h1>
+                <button>
+                    {this.state.buttonText}
+                </button>
+            </div>
+        )
     }
 }
 
