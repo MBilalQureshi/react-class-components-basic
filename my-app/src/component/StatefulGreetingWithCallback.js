@@ -1,6 +1,6 @@
 import React from "react";
-
-class StatefulGreeting extends React.Component {
+// Callback have multiple definitions, but in this case, Callback functions are those that executes only once Asyncronous function completes
+class StatefulGreetingWithCallback extends React.Component {
 
     constructor(props){
         super(props);
@@ -35,4 +35,4 @@ class StatefulGreeting extends React.Component {
     }
 }
 
-export default StatefulGreeting;
+export default StatefulGreetingWithCallback;
