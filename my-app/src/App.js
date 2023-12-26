@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import StatefulGreeting from './component/StatefulGreeting';
 import StatefulGreetingWithCallback from './component/StatefulGreetingWithCallback';
 import StatefulGreetingWithPrevState from './component/StatefulGreetingWithPrevState';
